@@ -29,6 +29,15 @@ namespace GA_InsertionSort_SSuleman
        // Generates a random integer array of the specified size and range
         static int[] GenerateRandomIntArray(int size, int minValue, int maxValue)
         {
+            // One way to reduce the maximum nesting level inside a method is to invert an “if” statement.
+            // This not only makes the code more readable but also reduces the number of unnecessary comparisons and shifts.
+            // Another way to optimize the algorithm logic is to use pattern matching expressions to implement behavior based on types and property values.
+
+            //Optimization can be achieved by replacing non-generic variants of container classes by their generic counterparts,
+            // cutting down on boxing/unboxing, using generics.
+            //Optimization is a crucial aspect of sorting algorithms in C#.
+            //It can help reduce the time and space complexity of the algorithm, making it more efficient and faster.
+            //The importance of optimization is particularly evident when dealing with large data sets.
             if (size <= 0 || minValue > maxValue)
             {
                 throw new ArgumentException("Invalid arguments");
@@ -63,11 +72,23 @@ namespace GA_InsertionSort_SSuleman
                 // until the correct position for the current element is found or
                 // the beginning of the sublist is reached using while loop
                 while (previousIndex >= 0 && array[previousIndex] > currentValue)
-                {  
+                {
+                    //The comparisons and shifts are the core operations of the algorithm that ensure the sorted order of the elements.
+                    //The comparisons determine the relative order of the elements, and
+                    //the shifts move the elements to their appropriate positions in the sorted sublist.
                     //The comparison is used to determine the relative order of two elements in the collection.
                     //The comparison is used to determine whether one element is greater than, less than, or equal to another element.
+
                     // Shift the larger element to the right by one position
                     array[previousIndex + 1] = array[previousIndex];
+                    //There are several sorting algorithms available, such as
+                    //1.Selection Sort, the algorithm repeatedly selects the smallest (or largest) element from the unsorted portion of the list
+                    //and swaps it with the first element of the unsorted part.
+                    //This process is repeated for the remaining unsorted portion until the entire list is sorted.
+                    //2. Merge Sort, the algorithm divides the input array into two halves, calls itself for the two halves, and then merges the two sorted halves. 
+                    //The merge operation is the key process that ensures sorted order at each step.
+                    //3.Quick Sort, the algorithm picks an element as a pivot and partitions the given array around the picked pivot.
+                    //Quick Sort rpeatedly putting pivots in their actual position makes the array sorted.
                     // Decrement the index of the previous element
                     previousIndex--;
                 }

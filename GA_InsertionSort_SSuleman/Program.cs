@@ -42,22 +42,30 @@ namespace GA_InsertionSort_SSuleman
             }
             return arr;
         }
-     
+        //The Insertion Sort algorithm is used to sort a list of elements by taking each element,
+        //and adding it to the correct position in the list. 
+        //The algorithm iterates through the list until the array is sorted.
         // A method that takes an array of integers as input and returns a sorted array as output
         public static int[] InsertionSort(int[] array)
         {
+            // A main loop in C# is used to execute a block of code repeatedly until a certain condition is met.
+            //A nested loop is a loop inside another loop. It is used to execute a block of code repeatedly
+            //for each iteration of the outer loop.
             // Loop through the array from the second element to the last element
             for (int currentIndex = 1; currentIndex < array.Length; currentIndex++)
             {
                 // Store the current element in a temporary variable
                 int currentValue = array[currentIndex];
+
                 // Initialize a variable to store the index of the previous element
                 int previousIndex = currentIndex - 1;
                 // Loop through the sorted sublist from right to left
                 // until the correct position for the current element is found or
                 // the beginning of the sublist is reached using while loop
                 while (previousIndex >= 0 && array[previousIndex] > currentValue)
-                {
+                {  
+                    //The comparison is used to determine the relative order of two elements in the collection.
+                    //The comparison is used to determine whether one element is greater than, less than, or equal to another element.
                     // Shift the larger element to the right by one position
                     array[previousIndex + 1] = array[previousIndex];
                     // Decrement the index of the previous element
